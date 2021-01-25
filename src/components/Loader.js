@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 export const Loader = () => (
   <div className="text-center">
@@ -6,4 +6,4 @@ export const Loader = () => (
       <span className="sr-only">Loading...</span>
     </div>
   </div>
-);
+)

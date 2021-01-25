@@ -1,23 +1,24 @@
-import React from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
-import { Alert } from "./components/Alert";
-import { Navbar } from "./components/Navbar";
-import { AlertState } from "./context/alert/AlertState";
-import { FirebaseState } from "./context/firebase/FirebaseState";
-import { About } from "./pages/About";
-import { Home } from "./pages/Home";
+import React from 'react';
+import {BrowserRouter, Route, Switch} from 'react-router-dom'
+import {Home} from './pages/Home'
+
+import {Navbar} from './components/Navbar'
+import {Alert} from './components/Alert'
+import {AlertState} from './context/alert/AlertState'
+import {FirebaseState} from './context/firebase/FirebaseState'
+import { About } from './pages/About';
 
 function App() {
   return (
     <FirebaseState>
       <AlertState>
         <BrowserRouter>
-          <Navbar />
+          <Navbar/>
           <div className="container pt-4">
-            <Alert />
+            <Alert/>
             <Switch>
-              <Route path={"/"} exact component={Home} />
-              <Route path={"/about"} component={About} />
+              <Route path={'/'} exact component={Home}/>
+              <Route path={'/about'} component={About}/>
             </Switch>
           </div>
         </BrowserRouter>
